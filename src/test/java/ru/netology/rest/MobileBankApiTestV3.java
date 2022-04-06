@@ -24,7 +24,7 @@ class MobileBankApiTestV3 {
                 // специализированные проверки - лучше
                 .contentType(ContentType.JSON)
                 .body("", hasSize(3))
-                .body("[0].currency", oneOf("RUM", "USD"))
+                .body("[0].currency", oneOf("RUB", "USD"))
                 .body("[0].balance", greaterThanOrEqualTo(0));
     }
 }
